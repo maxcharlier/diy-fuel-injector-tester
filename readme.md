@@ -1,8 +1,8 @@
 # DIY Fuel Injector Tester
-Here you can found an injector tester based on an arduino and a mosfet.
+Here you can find an injector tester based on an arduino and a MOSFET.
 The tester is based on the description of a Fuel Injector Tester (EM276) sell on eBay.
 Here is the description :
-"The tester can help diagnose injector problems,you can use it to test each injector individually to help identify stuck,leaking or burnt-out conditions.It used 12V vehicle battery for power.It has 4 pulse modes,the continuous mode(mode 4)helps identify good or bad injectors.The mode lock feature ensures test condition uniformity,It can work with any fuel pressure tester. 
+"The tester can help diagnose injector problems, you can use it to test each injector individually to help identify stuck, leaking or burnt-out conditions. It used 12 volt vehicle battery for power. It has 4 pulse modes, the continuous mode (mode 4) helps to identify good or bad injectors. The mode lock feature ensures test condition uniformity. It can work with any fuel pressure tester. 
 
 -----------
 
@@ -14,13 +14,13 @@ Four pulse modes:
 "
 
 # What you need
-You need a some cheap stuff:
+You need some cheap stuff:
 - an arduino platform (no matter the model, you just need a digital pin) 
 - a mofset (here I use a IRF520 MOSFET, it cost less than 1 euro on Aliexpress)
-- some Alligator Clips (avalaible on aliexpress)
+- some Alligator Clips (available on aliexpress)
 - a breadboard
 - a trombone or some cables
-- If you test your injectors(mode 1 to 3), you need a fuel injection pump pressure tester kit (check it on eBay).
+- If you test your injectors (modes 1 to 3), you will need a fuel injection pump pressure tester kit (check it on eBay).
 - If you want to clean our injector you can use the mode 4 and an ultrasound bath.
 
 I have used this project to check my injector without removing it from my motor.
@@ -28,7 +28,7 @@ I use the technical reviews to get the injector pin on my ECM (Engine Management
 To get a correct connection I use a needle in the connector of the ECM and an alligator clip. 
 ![demo][demo]
 
-Here is the pinout of the tester. You can connect the tester directly on the injector (but there are not easy to access). In this case, you don't need to know the "+" and the "-" because an injector is not sensible to it. But if like me, you use the ECM connector and the ground connector of your car, you need to respect the polarity.
+Here is the schematic of the tester. You can connect the tester directly on the injector (but there are not easy to access). In this case, you don't need to know the "+" and the "-" because an injector is not sensible to it. But if like me, you use the ECM connector and the ground connector of your car, you need to respect the polarity.
 ![Pinout][poinout]
 
 # Configuration
@@ -51,7 +51,17 @@ At the end you can check if the pressure has dropped of the same value for all o
 
 
 # Disclaimer
-I have only do this DIY injector tester for my personnal usage. You use it at your own risk.
+I have only done this DIY injector tester for my personal usage. You use it at your own risk.
+
+#References 
+- [MOSFET documentation](https://en.wikipedia.org/wiki/MOSFET) |  Mosfet on Aliexpress : "IRF520 MOSFET"
+- Arduino Nano on Aliexpress : "nano v3.0 ch340"
+- Alligator Clips on Aliexpress : "Alligator Clips Double-ended Clips"
+- [Pinout - Mosfet ](https://www.pinterest.co.uk/pin/396527942183351203/)
+- [Pinout - Arduino Nano](http://www.pighixxx.com/test/pinouts/boards/nano.pdf)
+- [Shematics Fuel injection](http://www.924cup.fr/sour/technique/moteur/MS924/hpfp.gif)
+- [EM276 Fuel Injector Tester  description](https://www.amazon.com/all-sun-EM276-Fuel-Injector-Tester/dp/B0126MEK3C)
+
 
 
 [poinout]: ./images/pinout.png "Pinout"
