@@ -8,7 +8,7 @@
  **/
 /* USER config part */
 unsigned int sig_pin=15; // Pin 15 = A1 on the arduino nano
-unsigned int mode = 3; // 4 modes possibles
+unsigned int selected_mode = 3; // 1 to 4 modes possibles
 
 /* pulse mode config part */
 // number of pulse for each mode
@@ -38,18 +38,18 @@ void setup() {
  * wait for the duration of one pulse
  */
 void wait_pulse(){
-  if(modes_pulse_width_ms[mode] == 1){ //delay in ms
-    delay(modes_pulse_width[mode]);
+  if(modes_pulse_width_ms[selected_mode] == 1){ //delay in ms
+    delay(modes_pulse_width[selected_mode]);
   }
   else{ //delay in µs
-    delayMicroseconds(modes_pulse_width[mode]);
+    delayMicroseconds(modes_pulse_width[selected_mode]);
   }
 }
 /**
  * Produce a cycle of pulses
  */
 void do_pulse(){
-  for(int pulse = 0; pulse < modes_nb_pulse[mode]; pulse++){
+  for(int pulse = 0; pulse < modes_nb_pulse[selected_mode]; pulse++){
     //open the injector
     digitalWrite(sig_pin, HIGH);  // HIGH
     digitalWrite(LED_BUILTIN, HIGH);  // HIGH
@@ -68,10 +68,10 @@ void do_pulse(){
  */
 void loop(){
   // check the value of the mode variable
-  if(mode >=1 && mode <= 4){
-    mode--; 
+  if(selected_mode >=1 && selected_mode <= 4){
+    selected_mode--; 
     // check if we do only one pulse cycle or multiple cycle
-    if(modes_pulse_repetition_ms[mode] == 0){
+    if(modes_pulse_repetition_ms[selected_mode] == 0){
       // we do only one cycle of pulse
       do_pulse();
     }
@@ -79,7 +79,7 @@ void loop(){
       //we do a loop of cycle of pulse
       while(1){
         do_pulse();
-        delay(modes_pulse_repetition_ms[mode]); //delay in ms
+        delay(modes_pulse_repetition_ms[selected_mode]); //delay in ms
       }
      }
   }
