@@ -1,19 +1,19 @@
 # DIY Fuel Injector Tester
-Here you can find an injector tester based on Arduino and a MOSFET.
+
+Here you can find an injector tester based on an Arduino and a MOSFET.
 The tester is based on the description of a Fuel Injector Tester (EM276).
 Here is this description :
-"The tester can help diagnose injector problems, you can use it to test each injector individually to help identify stuck, leaking or burnout conditions. 
-It used 12 volt vehicle battery for power. 
-It has 4 pulse modes, the continuous mode (mode 4) helps to identify good or bad injectors. 
-The mode lock feature ensures test condition uniformity. 
-It can work with any fuel pressure tester. 
------------
-Four pulse modes:
-- **Mode 1**: **1** output **pulse**, pulse width about **250 ms** is which.
-- **Mode 2**: **50** output **pulses**, each pulse width is about **7 ms**.
-- **Mode 3**: **100** output **pulses**, every pulse width/pulse rate is about **3.5 ms**.
-- **Mode 4**: Output **impulse continuously** at a speed of **50 pulses per 1450 ms**, pulse width **7 ms**.
-"
+>The tester can help diagnose injector problems, you can use it to test each injector individually to help identify stuck, leaking or burnout conditions. 
+>It used 12 volt vehicle battery for power. 
+>It has 4 pulse modes, the continuous mode (mode 4) helps to identify good or bad injectors. 
+>The mode lock feature ensures test condition uniformity. 
+>It can work with any fuel pressure tester. 
+>-----------
+>Four pulse modes:
+>- **Mode 1**: **1** output **pulse**, pulse width about **250 ms** is which.
+>- **Mode 2**: **50** output **pulses**, each pulse width is about **7 ms**.
+>- **Mode 3**: **100** output **pulses**, every pulse width/pulse rate is about **3.5 ms**.
+>- **Mode 4**: Output **impulse continuously** at a speed of **50 pulses per 1450 ms**, pulse width **7 ms**.
 
 
 # What you need
@@ -43,16 +43,14 @@ First connect your nanometer to your fuel ramp. Then turn 3 times your key in th
 Check the pressure on the nanometer and write it on a piece of paper.
 Then disconnect the "+" and "-" of your battery. Disconnect your ECM connector.
 
-Before using this Pulse Tester, use an Ohm meter to test the internal resistance of each injector. Should be 11-18 Ohms, with 14.5 Ohms as ideal. You should have the same resistance for all injectors and it is a good thing to be certain that you use the good pins.
+Before using this Pulse Tester, use an Ohm meter to test the internal resistance of each injector. Should be 11-18 Ohms, with 14.5 Ohms as ideal. You should have the same resistance for all injectors and it is a good thing to be sure that you use the good pins.
 **If one (1) or more injectors test out of spec, there's no sense going any further: the bad injector(s) MUST be replaced.**
 
-Now, connect the Arduino to your battery. Once the Arduino correctly powered, connect the "v+" to your injector (in the ECM connector) and finish by connecting the v- to the ground of your car (the ground cable disconnect from the battery).
-Then restart the Arduino by pressing on the reset button. The test least one second and you can hear the injector nose.
-Then read the nanometer: the pressure should have dropped, write it and then disconnect the Arduino, reconnect the ECM connector then the battery. Go in the car, start the engine (to remove the fuel in the cylinder).
+Now, connect the arduino to your battery. Once the arduino correctly powered, connect the "v+" to your injector (in the ECM connector) and finish by connecting the v- to the ground of your car (the ground cable disconnect from the battery).
+Then restart the arduino by pressing on the reset button. The test least one second and you can hear the injector nose.
+Then read the nanometer: the pressure should have dropped, write it and then disconnect the arduino, reconnect the ECM connector then the battery. Go in the car, start the engine (to remove the fuel in the cylinder).
 You can now restart the procedure for the other injectors.
 At the end you can check if the pressure has dropped of the same value for all of your injector.
-
-
 
 # Disclaimer
 I have only done this DIY injector tester for my personal usage. You use it at your own risk.
@@ -61,12 +59,10 @@ I have only done this DIY injector tester for my personal usage. You use it at y
 - [MOSFET documentation](https://en.wikipedia.org/wiki/MOSFET) |  Mosfet on Aliexpress : "IRF520 MOSFET"
 - Arduino Nano on Aliexpress : "nano v3.0 ch340"
 - Alligator Clips on Aliexpress : "Alligator Clips Double-ended Clips"
-- [Pinout - Mosfet ](https://www.pinterest.co.uk/pin/396527942183351203/)
+- [Pinout - MOFSET](https://www.pinterest.co.uk/pin/396527942183351203/)
 - [Pinout - Arduino Nano](http://www.pighixxx.com/test/pinouts/boards/nano.pdf)
 - [Shematics Fuel injection](http://www.924cup.fr/sour/technique/moteur/MS924/hpfp.gif)
 - [EM276 Fuel Injector Tester  description](https://www.amazon.com/all-sun-EM276-Fuel-Injector-Tester/dp/B0126MEK3C)
-
-
 
 [poinout]: ./images/pinout.png "Pinout"
 [demo]: ./images/demo-square.jpg "Demo"
